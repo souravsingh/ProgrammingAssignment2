@@ -20,9 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ##This function will return the inverse of the matrix that was created using
 ##the previous function (makeCacheMatrix). So, if inverse S of A
-## has not been calculated yet (is NULL), or the matrix A changed recently (S is
-## NULL again), then it will recalculate the inverse of A. Otherwise it will
-## directly return the cached value of the inverse (A$getinv).
+## has not been calculated yet, or the matrix A changed recently
+## , then it will recalculate the inverse of A. Otherwise it will
+## directly return the cached value of the inverse.
 
 cacheSolve <- function(x, ...) {
         S <- A$getinv()
