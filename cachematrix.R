@@ -41,14 +41,14 @@ cacheSolve <- function(x, ...) {
 ##Creating a cachematrix
 A <- makeCacheMatrix()
 set.seed(1)
-A$set(matrix(runif(9, -1, 1), 3))
+A$set(matrix(runif(9, -2, 5), 3))
 
-# The first time, cacheSolve() computes the inverse...
+# The first time, the cacheSolve function computes the inverse
 cacheSolve(A)
 
-# The second time, cacheSolve() returns the cached inverse...
+# Second time,the cacheSolve function returns the cached inverse
 cacheSolve(A)
 
-# After changing the matrix, cacheSolve() recomputes the inverse!
-A$set(matrix(runif(9, -1, 1), 3))
+# After changing the matrix, cacheSolve() recomputes the inverse 
+A$set(matrix(runif(9, -2, 5), 3))
 cacheSolve(A)
